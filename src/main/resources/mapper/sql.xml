@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.Dao">
+
+    <select id="selall" resultType="com.example.demo.entity.UserMess">
+    select  *  from users
+    </select>
+    <insert id="inserttousermess" parameterType="com.example.demo.entity.UserMess">
+        insert into usermess values(class_seq.nextval,#{username},#{password},#{nickName},#{age},#{sex},#{address})
+    </insert>
+    
+    <select id="repeated" parameterType="string" resultType="java.lang.String">
+        select * from USERMESS where username = #{username}
+    </select>
+
+</mapper>

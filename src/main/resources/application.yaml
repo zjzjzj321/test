@@ -1,0 +1,14 @@
+server:
+  port: 8071
+spring:
+  datasource:
+    username: scott
+    password: Tiger
+    url: jdbc:oracle:thin:@127.0.0.1:1521:XE
+# 这是mybatis的配置，告诉它写着sql文的xml文件的位置
+mybatis:
+  type-aliases-package: com.example.demo.entiy
+  mapper-locations: classpath:mapper/*.xml
+
+
+
